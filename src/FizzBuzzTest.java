@@ -14,26 +14,15 @@ class FizzBuzzTest extends FizzBuzz {
 	
 	@Test
 	void fizzTest() {
-		String result = FizzBuzz.convert(3);
-		assertEquals("fizz", result);
-	}
-	
-	@Test
-	void fizzTest2() {
-		String result = FizzBuzz.convert(9);
-		assertEquals("fizz", result);
+		assertEquals("fizz", FizzBuzz.convert(3));
+		assertEquals("fizz", FizzBuzz.convert(9));
 	}
 	
 	@Test
 	void buzzTest() {
-		String result = FizzBuzz.convert(5);
-		assertEquals("buzz", result);
+		assertEquals("buzz", FizzBuzz.convert(5));
+		assertEquals("buzz", FizzBuzz.convert(10));
 	}
 	
-	@Test
-	void buzzTest() {
-		String result = FizzBuzz.convert(10);
-		assertEquals("buzz", result);
-	}
 
 }
