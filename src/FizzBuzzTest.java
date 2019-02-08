@@ -24,5 +24,11 @@ class FizzBuzzTest extends FizzBuzz {
 		assertEquals("buzz", FizzBuzz.convert(10));
 	}
 	
+	@Test
+	void fizzBuzzTest() {
+		assertEquals("fizzbuzz", FizzBuzz.convert(15));
+		assertEquals("fizzbuzz", FizzBuzz.convert(30));
+	}
+	
 
 }
