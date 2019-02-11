@@ -1,33 +1,40 @@
 import static org.junit.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.BeforeClass;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.Assert;
 
 class FizzBuzzTest extends FizzBuzz {
+	
+	public static FizzBuzz fizzbuzz;
+	
+	@BeforeAll
+    public static void oneTimeSetUp() {
+		fizzbuzz = new FizzBuzz();
+    }
 
 	@Test
 	void numberTest() {
-		String result = FizzBuzz.convert(1);
-		assertEquals("1", result);
+		assertEquals("1", fizzbuzz.convert(1));
 	}
 	
 	@Test
 	void fizzTest() {
-		assertEquals("fizz", FizzBuzz.convert(3));
-		assertEquals("fizz", FizzBuzz.convert(9));
+		assertEquals("fizz", fizzbuzz.convert(3));
+		assertEquals("fizz", fizzbuzz.convert(9));
 	}
 	
 	@Test
 	void buzzTest() {
-		assertEquals("buzz", FizzBuzz.convert(5));
-		assertEquals("buzz", FizzBuzz.convert(10));
+		assertEquals("buzz", fizzbuzz.convert(5));
+		assertEquals("buzz", fizzbuzz.convert(10));
 	}
 	
 	@Test
 	void fizzBuzzTest() {
-		assertEquals("fizzbuzz", FizzBuzz.convert(15));
-		assertEquals("fizzbuzz", FizzBuzz.convert(30));
+		assertEquals("fizzbuzz", fizzbuzz.convert(15));
+		assertEquals("fizzbuzz", fizzbuzz.convert(30));
 	}
 	
 
